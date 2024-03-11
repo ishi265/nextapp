@@ -1,3 +1,5 @@
+import React from 'react'
+
 async function getTickets() {
     const res = await fetch('http://localhost:4000/tickets')
 
@@ -13,7 +15,7 @@ export default async function TicketList() {
         <div key={tickets.id} className="card my-5">
             <h3>{tickets.title}</h3>
             <p>{tickets.body.slice(0,200)}</p>
-            <div className={`pill ${ticket.priority}`}>
+            <div className={`pill ${tickets.priority}`}>
                 {tickets.priority} Priority
             </div>
         </div>
