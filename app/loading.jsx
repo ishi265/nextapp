@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function loading() {
   return (
     <main className='text-center'>
